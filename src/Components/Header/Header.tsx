@@ -1,6 +1,28 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.jpg";
 import Search from "../Search/Search";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import Badge from "@mui/material/Badge";
+// import { BadgeProps } from "@mui/material";
+import type { BadgeProps } from "@mui/material/Badge";
+import { FaRegHeart } from "react-icons/fa";
+
+import Tooltip from "@mui/material/Tooltip";
+
+import { styled } from "@mui/material/styles";
+import IconButton from "@mui/material/IconButton";
+import { BiGitCompare } from "react-icons/bi";
+const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
+  "& .MuiBadge-badge": {
+    backgroundColor: "#ff6767", // 👈 your color
+    color: "#fff",
+    right: -3,
+    top: 1,
+    border: `2px solid ${(theme.vars ?? theme).palette.background.paper}`,
+    padding: "0 4px",
+  },
+}));
+
 const Header = () => {
   return (
     <header>
@@ -27,7 +49,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="header py-3">
+      <div className="header py-1">
         <div className="container flex items-center justify-between">
           <div className="col1 w-[25%]">
             <Link to="/">
@@ -36,11 +58,55 @@ const Header = () => {
           </div>
 
           <div className="col2 w-[45%]">
-            <Search/>
+            <Search />
           </div>
-          
-          <div className="col3 w-[35%]">
-            <Link to=""></Link>
+
+          <div className="col3 w-[35%] flex items-center pl-7">
+            <ul className="flex items-center justify-end w-full gap-3">
+              <li className="list-none">
+                <Link
+                  to="/login"
+                  className="link transition-all text-sm font-semibold"
+                >
+                  Login
+                </Link>{" "}
+                |{" "}
+                <Link
+                  to="/register"
+                  className="link transition-all text-sm font-semibold"
+                >
+                  Register
+                </Link>
+              </li>
+
+              <li>
+                <Tooltip title="Compare" >
+                  <IconButton aria-label="cart">
+                    <StyledBadge badgeContent={4} color="primary">
+                      <BiGitCompare />{" "}
+                    </StyledBadge>
+                  </IconButton>
+                </Tooltip>
+              </li>
+              <li>
+                <Tooltip title="Wishlist">
+                  <IconButton aria-label="cart">
+                    <StyledBadge badgeContent={4} color="primary">
+                      <FaRegHeart />{" "}
+                    </StyledBadge>
+                  </IconButton>
+                </Tooltip>
+              </li>
+              <li>
+                <Tooltip title="Cart">
+                  <IconButton aria-label="cart">
+                    <StyledBadge badgeContent={4} color="primary">
+                      <AiOutlineShoppingCart />
+                    </StyledBadge>
+                  </IconButton>
+                </Tooltip>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
