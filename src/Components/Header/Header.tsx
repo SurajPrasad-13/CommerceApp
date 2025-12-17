@@ -12,6 +12,7 @@ import Tooltip from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import { BiGitCompare } from "react-icons/bi";
+import Navigation from "./Navigation/Navigation";
 const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
   "& .MuiBadge-badge": {
     backgroundColor: "#ff6767", // 👈 your color
@@ -25,7 +26,8 @@ const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
 
 const Header = () => {
   return (
-    <header>
+    <header className="bg-white">
+      {/* Top Strip */}
       <div className="top-strip py-2">
         <div className="container">
           <div className="flex items-center justify-between">
@@ -49,15 +51,16 @@ const Header = () => {
         </div>
       </div>
 
+      {/* logo & Search Strip */}
       <div className="header py-1">
-        <div className="container flex items-center justify-between">
+        <div className="container mx-auto flex items-center justify-between ">
           <div className="col1 w-[25%]">
             <Link to="/">
               <img src={logo} alt="logo" />
             </Link>
           </div>
 
-          <div className="col2 w-[45%]">
+          <div className="col2 w-[45%] ">
             <Search />
           </div>
 
@@ -80,7 +83,7 @@ const Header = () => {
               </li>
 
               <li>
-                <Tooltip title="Compare" >
+                <Tooltip title="Compare">
                   <IconButton aria-label="cart">
                     <StyledBadge badgeContent={4} color="primary">
                       <BiGitCompare />{" "}
@@ -110,6 +113,9 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      {/* Navigation Bar */}
+      <Navigation />
     </header>
   );
 };

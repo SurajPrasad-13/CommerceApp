@@ -1,0 +1,19 @@
+.navi {
+  position: relative;
+  display: inline-block;
+}
+.navi::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fa7878;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.navi:hover::after {
+  width: 100%;
+}
