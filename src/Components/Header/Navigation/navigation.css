@@ -17,3 +17,7 @@
 .navi:hover::after {
   width: 100%;
 }
+
+.categoryPanel a,button{
+  text-transform: capitalize !important;
+}
