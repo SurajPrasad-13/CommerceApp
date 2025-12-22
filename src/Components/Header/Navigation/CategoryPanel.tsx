@@ -119,30 +119,9 @@ const CategoryPanel = (props) => {
                       </li>
                     </ul>
                   )}
-
-                  {/* Sub-Child List */}
                 </li>
-                {/* <li className="list-none relative">
-                <Link to="/" className="w-full">
-                  <Button className="link w-full  justify-start!  text-black/70! ">
-                    outwear
-                  </Button>
-                </Link>
-                <FaRegPlusSquare className=" absolute top-2.5 right-3.5" />
-                <ul className="submenu absolute top-full pl-5 w-full  ">
-                  <li className="list-none relative">
-                    <Link
-                      to="/"
-                      className="link w-full  justify-start! transition-all text-sm "
-                    >
-                      outwear
-                    </Link>
-                  </li>
-                </ul>
-              </li> */}
               </ul>
             )}
-            {/* First Sub-List */}
           </li>
 
           <li className="list-none flex flex-col items-center relative">
@@ -220,32 +199,10 @@ const CategoryPanel = (props) => {
                       </li>
                     </ul>
                   )}
-
-                  {/* Sub-Child List */}
                 </li>
-                {/* <li className="list-none relative">
-                <Link to="/" className="w-full">
-                  <Button className="link w-full  justify-start!  text-black/70! ">
-                    outwear
-                  </Button>
-                </Link>
-                <FaRegPlusSquare className=" absolute top-2.5 right-3.5" />
-                <ul className="submenu absolute top-full pl-5 w-full  ">
-                  <li className="list-none relative">
-                    <Link
-                      to="/"
-                      className="link w-full  justify-start! transition-all text-sm "
-                    >
-                      outwear
-                    </Link>
-                  </li>
-                </ul>
-              </li> */}
               </ul>
             )}
-            {/* First Sub-List */}
           </li>
-          
         </ul>
       </div>
     </Box>

@@ -18,6 +18,116 @@
   width: 100%;
 }
 
-.categoryPanel a,button{
+.categoryPanel a,
+button {
   text-transform: capitalize !important;
 }
+.nav li .submenu { visibility: hidden;}
+.nav li .submenu button{font-weight: 400;}
+.nav li:hover .submenu {opacity: 1 !important; visibility: inherit; top: 100%;}
+.nav li .submenu li:hover button{color: #ff5252 !important;}
+
+.nav li .submenu li .submenu{top: 0px !important; left: 100% !important; opacity: 0 !important;}
+.nav li .submenu li:hover .submenu{left: 100% !important; opacity: 1 !important;
+}
+.nav li .submenu li .submenu button{color: rgba(0, 0, 0, 0.8) !important;}
+.nav li .submenu li .submenu button:hover{
+  color: #ff5252 !important;
+}
+
+/* =========================
+   NAV LINK UNDERLINE EFFECT
+   ========================= */
+
+/* .navi {
+  position: relative;
+  display: inline-block;
+} */
+
+/* hidden underline */
+/* .navi::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #fa7878;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+} */
+
+/* show underline on hover */
+/* .navi:hover::after {
+  width: 100%;
+} */
+
+/* =========================
+   TEXT FORMAT
+   ========================= */
+
+/* .categoryPanel a,
+button {
+  text-transform: capitalize !important;
+} */
+
+/* =========================
+   FIRST LEVEL DROPDOWN
+   ========================= */
+
+/* hide submenu by default */
+/* .nav li .submenu {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+} */
+
+/* show submenu on hover */
+/* .nav li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+} */
+
+/* submenu button text */
+/* .nav li .submenu button {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+.nav li .submenu button:hover {
+  color: #ff5252 !important;
+} */
+
+/* hover color */
+/* .nav li .submenu li:hover > button {
+  color: #ff5252 !important;
+} */
+
+/* =========================
+   SECOND LEVEL DROPDOWN
+   ========================= */
+
+/* hide nested submenu */
+/* .nav li .submenu li .submenu {
+  top: 0;
+  left: 100%;
+  opacity: 0;
+  visibility: hidden;
+} */
+
+/* show nested submenu on hover */
+/* .nav li .submenu li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  left: 100%;
+} */
+
+/* default text color */
+/* .nav li .submenu li .submenu button {
+  color: rgba(0, 0, 0, 0.8) !important;
+} */
+
+/* hover text color */
+/* .nav li .submenu li .submenu button:hover {
+  color: #ff5252 !important;
+} */
