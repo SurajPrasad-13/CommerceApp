@@ -11,6 +11,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   background-color: #f5f0f0;
+  overflow-x: hidden;
 }
 .container {
   width: 95%;
@@ -27,3 +28,17 @@ header .top-strip, .header {
 .link:hover {
   color: var(--color-primary);
 }
+
+.sliderHome{
+  overflow: inherit !important;
+}
+.swiper-slide-active{
+  width: 97% !important;
+
+}
+.swiper-slide-prev,.swiper-slide-next{
+  width: 91% !important;
+}
+ .swiper-pagination-bullet{
+  background-color: black !important;
+ }

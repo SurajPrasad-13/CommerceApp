@@ -39,7 +39,7 @@ const Navigation = () => {
                   Fashion
                 </Link>
                 {/* ---------- First level submenu ---------- */}
-                <div className="submenu absolute top-[120%] left-[0%] min-w-36 bg-white shadow-md opacity-0 transition-all duration-300 ">
+                <div className="submenu absolute top-[120%] left-[0%] min-w-36 bg-white shadow-md opacity-0 transition-all duration-300 z-50 ">
                   <ul>
                     <li className="list-none w-full relative">
                       <Link to="/men" className="w-full">
