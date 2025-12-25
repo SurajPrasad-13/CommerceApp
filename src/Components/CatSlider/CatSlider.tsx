@@ -9,7 +9,7 @@ import { Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 const CatSlider = () => {
   return (
-    <div className="homeCatSlider py-4">
+    <div className="homeCatSlider pt-4 pb-8">
       <div className="md:px-10 lg:px-15">
         <Swiper
           slidesPerView={8}

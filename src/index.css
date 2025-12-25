@@ -10,19 +10,16 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  /* background-color: #f5f0f0; */
-  background-color: black;
+  background-color: #f5f0f0;
   overflow-x: hidden;
 }
 .container {
-  width: 95%;
   margin: auto;
 }
 header .top-strip,
 .header {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  /* padding: 8px 0; */
 }
 .bg-org {
   background-color: #ff5252;
@@ -49,9 +46,9 @@ header .top-strip,
   color: #000;
 }
 
-.homeCatSlider {
+/* .homeCatSlider {
   overflow: inherit !important;
-}
+} */
 .homeCatSlider .swiper-button-prev,
 .homeCatSlider .swiper-button-next {
   width: 30px;
