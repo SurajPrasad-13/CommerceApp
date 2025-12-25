@@ -10,14 +10,16 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  background-color: #f5f0f0;
+  /* background-color: #f5f0f0; */
+  background-color: black;
   overflow-x: hidden;
 }
 .container {
   width: 95%;
   margin: auto;
 }
-header .top-strip, .header {
+header .top-strip,
+.header {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   /* padding: 8px 0; */
@@ -29,16 +31,58 @@ header .top-strip, .header {
   color: var(--color-primary);
 }
 
-.sliderHome{
+.sliderHome {
   overflow: inherit !important;
 }
-.swiper-slide-active{
+/* .swiper-slide-active{
   width: 97% !important;
 
-}
-.swiper-slide-prev,.swiper-slide-next{
+} */
+/* .swiper-slide-prev,.swiper-slide-next{
   width: 91% !important;
-}
- .swiper-pagination-bullet{
+} */
+.swiper-pagination-bullet {
   background-color: black !important;
- }
+}
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  color: #000;
+}
+
+.homeCatSlider {
+  overflow: inherit !important;
+}
+.homeCatSlider .swiper-button-prev,
+.homeCatSlider .swiper-button-next {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all ease-in 0.1s;
+  &:hover {
+    background-color: rgba(254, 56, 56, 0.2);
+  }
+}
+.homeCatSlider .swiper-button-prev svg,
+.homeCatSlider .swiper-button-next svg {
+  height: 50%;
+  width: 50%;
+  &:hover {
+    height: 90% !important;
+    color: white !important;
+  }
+}
+
+.homeCatSlider .swiper-button-prev {
+  left: -10px !important;
+}
+.homeCatSlider .swiper-button-next {
+  right: -10px !important;
+}
+
+.homeCatSlider .item {
+  border: 1px solid rgb(0, 0, 0, 0.1);
+}
+
+
