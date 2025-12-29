@@ -1,0 +1,10 @@
+.productItem .actions button svg{
+  color: black ;
+  &:hover{
+    color:white;
+  }
+}
+
+.productSlider .swiper-wrapper{
+  padding: 17px 0 ;
+}

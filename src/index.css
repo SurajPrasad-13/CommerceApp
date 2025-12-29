@@ -2,7 +2,9 @@
 
 @theme {
   --color-primary: #ff5252;
+  --color-secondary: #000;
   --background-color-primary: #ff5252;
+  /* --background-color-secondary: #f0f0f0; */
 }
 * {
   box-sizing: border-box;
@@ -31,13 +33,6 @@ header .top-strip,
 .sliderHome {
   overflow: inherit !important;
 }
-/* .swiper-slide-active{
-  width: 97% !important;
-
-} */
-/* .swiper-slide-prev,.swiper-slide-next{
-  width: 91% !important;
-} */
 .swiper-pagination-bullet {
   background-color: black !important;
 }
@@ -49,14 +44,14 @@ header .top-strip,
 /* .homeCatSlider {
   overflow: inherit !important;
 } */
-.homeCatSlider .swiper-button-prev,
-.homeCatSlider .swiper-button-next {
-  width: 30px;
-  height: 30px;
+.swiper-button-prev,
+.swiper-button-next {
+  height: 30px !important;
+  width: 30px !important;
   min-width: 30px;
   background-color: white;
   border-radius: 50%;
-  transition: all ease-in 0.1s;
+  transition: all ease-in-out 0.1s;
   &:hover {
     background-color: rgba(254, 56, 56, 0.2);
   }
@@ -65,10 +60,6 @@ header .top-strip,
 .homeCatSlider .swiper-button-next svg {
   height: 50%;
   width: 50%;
-  &:hover {
-    height: 90% !important;
-    color: white !important;
-  }
 }
 
 .homeCatSlider .swiper-button-prev {
@@ -82,4 +73,24 @@ header .top-strip,
   border: 1px solid rgb(0, 0, 0, 0.1);
 }
 
+.smlBtn .swiper-button-prev,
+.smlBtn .swiper-button-next {
+  height: 30px;
+  width: 30px;
+  top: 55% !important ;
+}
+.smlBtn .swiper-button-prev svg,
+.smlBtn .swiper-button-next svg {
+  height: 55%;
+  &:hover {
+    color: white;
+  }
+}
+
+.MuiTabs-indicator {
+  background-color: #ff5252 !important;
+}
+.MuiTab-textColorPrimary.Mui-selected {
+  color: #ff5252 !important;
+}
 
