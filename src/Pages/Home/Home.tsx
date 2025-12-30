@@ -50,17 +50,16 @@ const Home = () => {
                   <Tab label="Beauty" />
                   <Tab label="Wellness" />
                   <Tab label="Jewellery" />
-                 
                 </Tabs>
               </Box>
             </div>
           </div>
 
-          <ProductSlider items ={6} />
+          <ProductSlider items={5} />
         </div>
       </section>
 
-      <section className="pb-12 bg-white">
+      <section className="pb-4 bg-white">
         <div className="container">
           <div className="freeShipping w-full p-4 border border-primary flex items-center justify-between rounded-md mb-6  ">
             <div className="col1 flex items-center justify-center gap-4">
@@ -82,6 +81,25 @@ const Home = () => {
             </div>
           </div>
           <AdsBannerSlider items={3} />
+        </div>
+      </section>
+
+      <section className="pb-5 bg-white">
+        <div className="lg:w-[95%] mx-auto">
+          <h3 className="text-[20px] font-semibold ">Latest Products</h3>
+          <ProductSlider items={4} />
+          <div className="container">
+            <AdsBannerSlider items={3} />
+          </div>
+        </div>
+      </section>
+      <section className="pb-5 bg-white">
+        <div className="lg:w-[95%] mx-auto">
+          <h3 className="text-[20px] font-semibold ">Featured Products</h3>
+          <ProductSlider items={4} />
+          <div className="container">
+            <AdsBannerSlider items={3} />
+          </div>
         </div>
       </section>
     </>

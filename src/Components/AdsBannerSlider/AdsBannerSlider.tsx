@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import banner1 from "../../assets/banner1.webp";
 import banner2 from "../../assets/banner2.webp";
@@ -16,7 +15,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import BannerBox from "../BannerBox/BannerBox";
 const AdsBannerSlider = (props: { items: number }) => {
   return (
-    <div className="py-5 w-full">
+    <div className="py-4 w-full">
       <Swiper
         slidesPerView={props.items}
         spaceBetween={20}

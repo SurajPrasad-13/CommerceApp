@@ -26,11 +26,19 @@ const Navigation = () => {
             </Button>
           </div>
 
- {/* ================= CENTER COLUMN ================= */}
-    {/* Main navigation links */}
+          {/* ================= CENTER COLUMN ================= */}
+          {/* Main navigation links */}
           <div className="col_2 w-[60%] ">
             <ul className="nav flex items-center gap-5">
-               {/* ===== NAV ITEM : Fashion ===== */}
+              <li className="list-none">
+                <Link
+                  to="/"
+                  className="navi link transition-all text-sm font-medium"
+                >
+                  Home
+                </Link>
+              </li>
+              {/* ===== NAV ITEM : Fashion ===== */}
               <li className="list-none relative">
                 <Link
                   to="/"
@@ -50,11 +58,11 @@ const Navigation = () => {
                       {/* ---------- Second level submenu (Right side) ---------- */}
                       <div className="submenu absolute top-[120%] left-[0%] min-w-36 bg-white shadow-md opacity-0 transition-all duration-300 ">
                         <ul>
-                           {/* Nested submenu items */}
+                          {/* Nested submenu items */}
                           <li className="list-none w-full relative">
                             <Link to="/" className="w-full">
                               <Button className=" w-full justify-start! rounded-none!">
-                              t-shirt
+                                t-shirt
                               </Button>
                             </Link>
                           </li>
@@ -91,7 +99,7 @@ const Navigation = () => {
                       {/* ---------- Second level submenu (Right side) Ends Here ---------- */}
                     </li>
 
-                     {/* Other first level submenu items */}
+                    {/* Other first level submenu items */}
                     <li className="list-none w-full">
                       <Link to="/men" className="w-full">
                         <Button className="text-[rgba(0,0,0,0.8)]! hover:text-primary! w-full justify-start! rounded-none!">
@@ -125,16 +133,7 @@ const Navigation = () => {
                 {/* ---------- First level submenu Ends Here ---------- */}
               </li>
 
-
-
-              <li className="list-none">
-                <Link
-                  to="/"
-                  className="navi link transition-all text-sm font-medium"
-                >
-                  Home
-                </Link>
-              </li>
+              
 
               <li className="list-none">
                 <Link
@@ -195,7 +194,7 @@ const Navigation = () => {
             </ul>
           </div>
 
- {/* Free delivery info */}
+          {/* Free delivery info */}
           <div className="col_2 w-[20%] text-sm flex items-center gap-2 mb-0 mt-0 font-medium ">
             <GoRocket className="text-[18px]" />
             <p> Free International Delivery</p>
