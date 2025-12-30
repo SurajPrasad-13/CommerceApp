@@ -2,6 +2,14 @@ import AdsBannerSlider from "../../Components/AdsBannerSlider/AdsBannerSlider";
 import CatSlider from "../../Components/CatSlider/CatSlider";
 import HomeSlider from "../../Components/HomeSlider/HomeSlider";
 import { LiaShippingFastSolid } from "react-icons/lia";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+// import required modules
+import { Navigation } from "swiper/modules";
 
 // for scrollable tab
 import Tabs from "@mui/material/Tabs";
@@ -9,6 +17,7 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { useState } from "react";
 import ProductSlider from "../../Components/ProductSlider/ProductSlider";
+import BlogItem from "../../Components/BlogItem/BlogItem";
 
 const Home = () => {
   const [value, setValue] = useState(0);
@@ -21,6 +30,7 @@ const Home = () => {
       <HomeSlider />
       <CatSlider />
 
+      {/* Popular Product */}
       <section className="bg-white py-8">
         <div className="lg:w-[95%] mx-auto ">
           <div className="flex items-center justify-between">
@@ -84,6 +94,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Latest Product */}
       <section className="pb-5 bg-white">
         <div className="lg:w-[95%] mx-auto">
           <h3 className="text-[20px] font-semibold ">Latest Products</h3>
@@ -93,6 +104,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Featured Product */}
       <section className="pb-5 bg-white">
         <div className="lg:w-[95%] mx-auto">
           <h3 className="text-[20px] font-semibold ">Featured Products</h3>
@@ -100,6 +113,24 @@ const Home = () => {
           <div className="container">
             <AdsBannerSlider items={3} />
           </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section className="pb-8 bg-white blogSection ">
+        <div className="container">
+          <h3 className="text-[20px] capitalize font-semibold mb-4 ">From the blog</h3>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={20}
+            navigation={true}
+            modules={[Navigation]}
+            className="blogSlider"
+          >
+            <SwiperSlide className="">
+              <BlogItem />
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
     </>
