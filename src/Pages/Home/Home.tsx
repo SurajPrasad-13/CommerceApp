@@ -18,6 +18,7 @@ import Box from "@mui/material/Box";
 import { useState } from "react";
 import ProductSlider from "../../Components/ProductSlider/ProductSlider";
 import BlogItem from "../../Components/BlogItem/BlogItem";
+import Footer from "../../Components/Footer/Footer";
 
 const Home = () => {
   const [value, setValue] = useState(0);
@@ -125,7 +126,7 @@ const Home = () => {
             spaceBetween={25}
             navigation={true}
             modules={[Navigation]}
-            className="blogSlider"
+            className="blogSlider relative"
           >
             <SwiperSlide className="">
               <BlogItem />
@@ -145,6 +146,7 @@ const Home = () => {
           </Swiper>
         </div>
       </section>
+      <Footer/>
     </>
   );
 };
