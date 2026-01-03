@@ -15,6 +15,12 @@ body {
   background-color: #f5f0f0;
   overflow-x: hidden;
 }
+.btn-org{
+  background-color: #ff5252 !important;
+  color: white !important;
+  font-weight: 500;padding: 7px 20px !important;
+  margin: 5px 0 !important;
+}
 .container {
   margin: auto;
 }
@@ -123,3 +129,8 @@ header .top-strip,
   position: absolute;
   right: -45px !important;
 } */
+
+/* Footer Form Lable CSS */
+.MuiFormControlLabel-label{
+  font-size: 14px !important;
+}
