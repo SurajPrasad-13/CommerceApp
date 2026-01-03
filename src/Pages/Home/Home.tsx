@@ -122,11 +122,23 @@ const Home = () => {
           <h3 className="text-[20px] capitalize font-semibold mb-4 ">From the blog</h3>
           <Swiper
             slidesPerView={3}
-            spaceBetween={20}
+            spaceBetween={25}
             navigation={true}
             modules={[Navigation]}
             className="blogSlider"
           >
+            <SwiperSlide className="">
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <BlogItem />
+            </SwiperSlide>
+            <SwiperSlide className="">
+              <BlogItem />
+            </SwiperSlide>
             <SwiperSlide className="">
               <BlogItem />
             </SwiperSlide>
