@@ -94,3 +94,32 @@ header .top-strip,
   color: #ff5252 !important;
 }
 
+
+/* Blog slider CSS */
+/* .blogSlider{
+  overflow: visible !important;
+}
+
+.blogSlider .swiper-button-prev,
+.blogSlider .swiper-button-next {
+  top: 40%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  color: #000;
+} */
+
+/* LEFT arrow – cards ke bahar */
+/* .blogSlider .swiper-button-prev {
+  position: absolute;
+  left: -45px !important;
+} */
+
+/* RIGHT arrow – cards ke bahar */
+/* .blogSlider .swiper-button-next {
+  position: absolute;
+  right: -45px !important;
+} */

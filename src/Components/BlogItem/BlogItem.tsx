@@ -13,13 +13,28 @@ const BlogItem = () => {
           <IoMdTime /> 13 April, 2025
         </span>
       </div>
-      <div className="info py-4">
-        <h2 className=" font-medium text-black text-[15px] "> 
-          <Link to='/' className="link">Lorem ipsum dolor sit amet.</Link>
+      <div className="info py-4 px-3">
+        <h2 className=" font-medium text-black text-[15px] ">
+          <Link to="/" className="link">
+            Lorem ipsum dolor sit amet.
+          </Link>
         </h2>
-        <p className=" text-sm text-[rgba(0,0,0,0.7)] mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit unde et, est sapiente quas illum amet, enim numquam...</p>
-        <Link to='/' className="link font-medium text-sm flex items-center">
-        Read More <IoIosArrowForward  /> </Link>
+        <p className=" text-sm text-[rgba(0,0,0,0.7)] mb-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit unde
+          et, est sapiente quas illum amet, enim numquam...
+        </p>
+        {/* <Link to="/" className="">
+          <p className="hover:text-primary font-medium text-sm flex items-center group ">
+            Read More{" "}
+            <IoIosArrowForward className=" group-hover:translate-x-1 duration-400 " />{" "}
+          </p>
+        </Link> */}
+        <Link to="/" className="group/readmore inline-block">
+          <p className="hover:text-primary font-medium text-sm flex items-center gap-1">
+            Read More
+            <IoIosArrowForward className="transition-transform duration-300 group-hover/readmore:translate-x-1" />
+          </p>
+        </Link>
       </div>
     </div>
   );
