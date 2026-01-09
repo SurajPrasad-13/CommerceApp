@@ -1,12 +1,21 @@
-import FormGroup from "@mui/material/FormGroup";
+import "./Sidebar.css";
+// MUI Components
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import "./Sidebar.css";
+import Button from "@mui/material/Button";
+import Rating from "@mui/material/Rating";
+
+// React Icons
 import { useState } from "react";
-import { Collapse } from "react-collapse";
 import { FaAngleDown } from "react-icons/fa6";
 import { FaAngleUp } from "react-icons/fa6";
-import Button from "@mui/material/Button";
+
+// React Collapse Packege
+import { Collapse } from "react-collapse";
+
+// Range Slider
+import RangeSlider from "react-range-slider-input";
+import "react-range-slider-input/dist/style.css";
 
 const Sidebar = () => {
   const [isOpenCategoryFilter, setIsOpenCategoryFilter] = useState(false);
@@ -240,8 +249,6 @@ const Sidebar = () => {
               }
               label="Not Available (1)"
             />
-            
-            
           </div>
         </Collapse>
       </div>
@@ -303,10 +310,66 @@ const Sidebar = () => {
               }
               label="Large"
             />
-            
-            
+            <FormControlLabel
+              control={
+                <Checkbox
+                  size="small"
+                  sx={{
+                    color: "#ff5252",
+                    "&.Mui-checked": {
+                      color: "#ff5252",
+                    },
+                    fontSize: 28,
+                  }}
+                />
+              }
+              label="XL"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  size="small"
+                  sx={{
+                    color: "#ff5252",
+                    "&.Mui-checked": {
+                      color: "#ff5252",
+                    },
+                    fontSize: 28,
+                  }}
+                />
+              }
+              label="XXL"
+            />
           </div>
         </Collapse>
+      </div>
+
+      <div className="box mt-3 ">
+        <h3 className="mb-3 font-semibold flex items-center justify-between pr-3">
+          Filter By Price
+        </h3>
+        <RangeSlider />
+        <div className="flex justify-between py-4 priceRange text-[13px] ">
+          <span>
+            From : <strong className="">₹{1000}</strong>
+          </span>
+          <span>
+            To : <strong className="">₹{5000}</strong>
+          </span>
+        </div>
+      </div>
+
+      <div className="box mt-3 ">
+        <h3 className="mb-3 font-semibold flex items-center justify-between pr-3">
+          Filter By Rating
+        </h3>
+        <div className="flex flex-col">
+          <Rating name="size-small" defaultValue={5} size="small" readOnly />
+          <Rating name="size-small" defaultValue={4} size="small" readOnly />
+          <Rating name="size-small" defaultValue={3} size="small" readOnly />
+          <Rating name="size-small" defaultValue={2} size="small" readOnly />
+          <Rating name="size-small" defaultValue={1} size="small" readOnly />
+        </div>
       </div>
     </aside>
   );
