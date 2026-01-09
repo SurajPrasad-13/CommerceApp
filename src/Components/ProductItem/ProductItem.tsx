@@ -74,8 +74,8 @@ const ProductItem = (props: ProductItemProps) => {
             ${props.newPrice}
           </span>
         </div>
-        <Button className="w-[97%]    text-primary! border! border-primary! flex items-center text-[13px]! gap-3 font-medium! uppercase! hover:bg-black! hover:text-white! transition-all duration-400 hover:border-black!">
-          <AiOutlineShoppingCart className="text-xl " />
+        <Button className="w-[97%] text-primary! border! border-primary! flex items-center text-[13px]! gap-3 font-medium! uppercase! hover:bg-black! hover:text-white! transition-all duration-400! hover:border-black!">
+          <AiOutlineShoppingCart className="text-xl lg:visible hidden " />
           Add to cart
         </Button>
       </div>

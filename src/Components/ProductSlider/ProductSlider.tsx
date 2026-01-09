@@ -2,10 +2,12 @@
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // import required modules
 import { Navigation } from "swiper/modules";
+
 import ProductItem from "../ProductItem/ProductItem";
+
+// Images
 import womenJeans1 from "../../assets/Women-Wide-Leg-Light-Fade-1.jpg";
 import womenJeans2 from "../../assets/Women-Wide-Leg-Light-Fade-2.jpg";
 import PrintedKurta1 from "../../assets/printedAnarkaliKurta-1.jpg";
@@ -14,6 +16,12 @@ import CasualBrownShirt1 from "../../assets/CasualBrownShirt1.jpg";
 import CasualBrownShirt2 from "../../assets/CasualBrownShirt2.jpg";
 import PurpleCasualShirt1 from "../../assets/PurpleCasualShirt1.webp";
 import PurpleCasualShirt2 from "../../assets/PurpleCasualShirt2.webp";
+import SatinSaree1 from '../../assets/EmbroideredSatinSaree1.webp'
+import SatinSaree2 from '../../assets/EmbroideredSatinSaree2.webp'
+import BlueSaree1 from '../../assets/BlueSirilSilk1.webp'
+import BlueSaree2 from '../../assets/BlueSirilSilk2.webp'
+import FloralChiffonSaree1 from '../../assets/FloralChiffonSaree1.webp'
+import FloralChiffonSaree2 from '../../assets/FloralChiffonSaree2.webp'
 const ProductSlider = (props: { items: number }) => {
   return (
     <section className="productSlider py-3">
@@ -26,7 +34,7 @@ const ProductSlider = (props: { items: number }) => {
       >
         <SwiperSlide className=" ">
           <ProductItem
-          discount={10}
+            discount={10}
             img={[womenJeans1, womenJeans2]}
             brand={"Flying Machine"}
             title={"women relax fit light fade jeans"}
@@ -36,7 +44,7 @@ const ProductSlider = (props: { items: number }) => {
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ProductItem
-          discount={17}
+            discount={17}
             img={[PrintedKurta1, PrintedKurta2]}
             brand={"ftDiva"}
             title={"mandarin collar printed anarkali kurta"}
@@ -46,7 +54,7 @@ const ProductSlider = (props: { items: number }) => {
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ProductItem
-          discount={24}
+            discount={24}
             img={[CasualBrownShirt1, CasualBrownShirt2]}
             brand={"Campus Sutra"}
             title={"Cuban Collar Polycotton Casual Shirt"}
@@ -56,12 +64,42 @@ const ProductSlider = (props: { items: number }) => {
         </SwiperSlide>
         <SwiperSlide className=" ">
           <ProductItem
-          discount={24}
+            discount={24}
             img={[PurpleCasualShirt1, PurpleCasualShirt2]}
             brand={"Allen Solly"}
             title={"Pure cotton purple Casual Shirt"}
             newPrice={1999}
             oldPrice={2250}
+          />
+        </SwiperSlide>
+        <SwiperSlide className=" ">
+          <ProductItem
+            discount={22}
+            img={[SatinSaree1, SatinSaree2]}
+            brand={"Allen Solly"}
+            title={"Embroidered Satin Saree"}
+            newPrice={4785}
+            oldPrice={5500}
+          />
+        </SwiperSlide>
+        <SwiperSlide className=" ">
+          <ProductItem
+            discount={22}
+            img={[BlueSaree1, BlueSaree2]}
+            brand={"kasee"}
+            title={"Embellished Embroidered Saree"}
+            newPrice={1599}
+            oldPrice={1999}
+          />
+        </SwiperSlide>
+        <SwiperSlide className=" ">
+          <ProductItem
+            discount={22}
+            img={[FloralChiffonSaree1, FloralChiffonSaree2]}
+            brand={"Koskii"}
+            title={"Floral Beads and Stones Pure Chiffon Saree"}
+            newPrice={1850}
+            oldPrice={2450}
           />
         </SwiperSlide>
         {/* <SwiperSlide className=" ">

@@ -8,9 +8,9 @@ import { Pagination, Autoplay } from "swiper/modules";
 const HomeSlider = () => {
   return (
     <div className="homeSlider py-4">
-      <div className="">
+      <div className=" mx-auto">
         <Swiper
-          slidesPerView={1.1}
+          slidesPerView={1}
           spaceBetween={20}
           loop={true}
           speed={800} // smooth forward transition
@@ -23,16 +23,16 @@ const HomeSlider = () => {
           className="sliderHome"
         >
           <SwiperSlide className="mx-10">
-            <div className="item rounded-2xl overflow-hidden w-[95%]">
+            <div className="item rounded-2xl overflow-hidden w-full">
               <img
                 src="https://serviceapi.spicezgold.com/download/1763051442252_34296.jpg"
                 alt="Banner Slide"
-                className="object-cover  "
+                className="object-cover w-full  "
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="item rounded-2xl overflow-hidden w-[95%]">
+            <div className="item rounded-2xl overflow-hidden w-full">
               <img
                 src="https://serviceapi.spicezgold.com/download/1763812170460_homeslides2.jpg"
                 alt="Banner Slide"
@@ -41,7 +41,7 @@ const HomeSlider = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="item rounded-2xl overflow-hidden w-[95%]">
+            <div className="item rounded-2xl overflow-hidden w-full">
               <img
                 src="https://serviceapi.spicezgold.com/download/1759938751802_30744.jpg"
                 alt="Banner Slide"
@@ -50,7 +50,7 @@ const HomeSlider = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="item rounded-2xl overflow-hidden w-[95%]">
+            <div className="item rounded-2xl overflow-hidden w-full">
               <img
                 src="https://serviceapi.spicezgold.com/download/1751685130717_NewProject(8).jpg"
                 alt=""
@@ -59,7 +59,7 @@ const HomeSlider = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="item rounded-2xl overflow-hidden w-[95%]">
+            <div className="item rounded-2xl overflow-hidden w-full">
               <img
                 src="https://serviceapi.spicezgold.com/download/1748955932914_NewProject(1).jpg"
                 alt=""
