@@ -16,12 +16,13 @@ import CasualBrownShirt1 from "../../assets/CasualBrownShirt1.jpg";
 import CasualBrownShirt2 from "../../assets/CasualBrownShirt2.jpg";
 import PurpleCasualShirt1 from "../../assets/PurpleCasualShirt1.webp";
 import PurpleCasualShirt2 from "../../assets/PurpleCasualShirt2.webp";
-import SatinSaree1 from '../../assets/EmbroideredSatinSaree1.webp'
-import SatinSaree2 from '../../assets/EmbroideredSatinSaree2.webp'
-import BlueSaree1 from '../../assets/BlueSirilSilk1.webp'
-import BlueSaree2 from '../../assets/BlueSirilSilk2.webp'
-import FloralChiffonSaree1 from '../../assets/FloralChiffonSaree1.webp'
-import FloralChiffonSaree2 from '../../assets/FloralChiffonSaree2.webp'
+import SatinSaree1 from "../../assets/EmbroideredSatinSaree1.webp";
+import SatinSaree2 from "../../assets/EmbroideredSatinSaree2.webp";
+import BlueSaree1 from "../../assets/BlueSirilSilk1.webp";
+import BlueSaree2 from "../../assets/BlueSirilSilk2.webp";
+import FloralChiffonSaree1 from "../../assets/FloralChiffonSaree1.webp";
+import FloralChiffonSaree2 from "../../assets/FloralChiffonSaree2.webp";
+
 const ProductSlider = (props: { items: number }) => {
   return (
     <section className="productSlider py-3">

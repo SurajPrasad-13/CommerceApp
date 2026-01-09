@@ -23,7 +23,7 @@ const ProductItem = (props: ProductItemProps) => {
     <div className="productItem rounded-md overflow-hidden border border-gray-400 hover:shadow-lg transition-all hover:-translate-y-0.5 ">
       <div className="group imgWrapper w-full  rounded-md relative">
         <Link to="/">
-          <div className="img md:h-50 overflow-hidden relative ">
+          <div className="img h-65 md:h-55 overflow-hidden relative">
             <img src={props.img[0]} alt="" className="w-full" />
             <img
               src={props.img[1]}
@@ -54,7 +54,7 @@ const ProductItem = (props: ProductItemProps) => {
           </Tooltip>
         </div>
       </div>
-      <div className="info py-3 px-2  ">
+      <div className="info pb-3 pt-1 px-2  ">
         <h6 className="text-xs ">
           <Link to="/" className="link transition-all">
             {props.brand}
