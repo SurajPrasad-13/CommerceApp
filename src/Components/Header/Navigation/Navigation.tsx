@@ -13,7 +13,7 @@ const Navigation = () => {
   };
   return (
     <>
-      <nav>
+      <nav className="mx-auto">
         <div className=" flex items-center justify-center px-4 gap-8">
           <div className="col_1 w-[20%]">
             <Button
@@ -29,7 +29,7 @@ const Navigation = () => {
           {/* ================= CENTER COLUMN ================= */}
           {/* Main navigation links */}
           <div className="col_2 w-[60%] ">
-            <ul className="nav flex items-center gap-5">
+            <ul className="nav flex items-center justify-center gap-5">
               <li className="list-none">
                 <Link
                   to="/"
@@ -195,7 +195,7 @@ const Navigation = () => {
           </div>
 
           {/* Free delivery info */}
-          <div className="col_2 w-[20%] text-sm flex items-center gap-2 mb-0 mt-0 font-medium ">
+          <div className="col_2 w-[20%] text-sm flex items-center justify-end gap-2 mb-0 mt-0 font-medium">
             <GoRocket className="text-[18px]" />
             <p> Free International Delivery</p>
           </div>

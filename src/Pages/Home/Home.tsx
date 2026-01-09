@@ -18,7 +18,9 @@ import Box from "@mui/material/Box";
 import { useState } from "react";
 import ProductSlider from "../../Components/ProductSlider/ProductSlider";
 import BlogItem from "../../Components/BlogItem/BlogItem";
-import Footer from "../../Components/Footer/Footer";
+import HomeSliderV2 from "../../Components/HomeSliderV2/HomeSliderV2";
+import BannerBoxV2 from "../../Components/BannerBoxV2/BannerBoxV2";
+import AdsBannerSliderV2 from "../../Components/AdsBannerSliderV2/AdsBannerSliderV2";
 
 const Home = () => {
   const [value, setValue] = useState(0);
@@ -29,10 +31,11 @@ const Home = () => {
   return (
     <>
       <HomeSlider />
+
       <CatSlider />
 
       {/* Popular Product */}
-      <section className="bg-white py-8">
+      <section className="bg-white pt-8">
         <div className="lg:w-[95%] mx-auto ">
           <div className="flex items-center justify-between">
             <div className="leftSec ">
@@ -69,7 +72,26 @@ const Home = () => {
           <ProductSlider items={5} />
         </div>
       </section>
+      {/* Slider V2 */}
+      <section className="py-6 bg-white">
+        <div className=" w-[95%] mx-auto flex items-start gap-5">
+          <div className="part1 w-[70%]">
+            <HomeSliderV2 />
+          </div>
+          <div className="part2 w-[30%] flex flex-col  items-center justify-between gap-4 ">
+            <BannerBoxV2
+              info="left"
+              image="https://serviceapi.spicezgold.com/download/1760160666204_1737020916820_New_Project_52.jpg"
+            />
+            <BannerBoxV2
+              info="right"
+              image="https://serviceapi.spicezgold.com/download/1741664665391_1741497254110_New_Project_50.jpg"
+            />
+          </div>
+        </div>
+      </section>
 
+      {/* Add Banner Section */}
       <section className="pb-4 bg-white">
         <div className="container">
           <div className="freeShipping w-full p-4 border border-primary flex items-center justify-between rounded-md mb-6  ">
@@ -91,7 +113,9 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <AdsBannerSlider items={3} />
+          {/* pehle ye wala static banner ke saath bna hua tha */}
+          {/* <AdsBannerSlider items={3} /> */}
+          <AdsBannerSliderV2 items={3} />
         </div>
       </section>
 
@@ -120,7 +144,9 @@ const Home = () => {
       {/* Blog Section */}
       <section className="pb-8 bg-white blogSection ">
         <div className="container">
-          <h3 className="text-[20px] capitalize font-semibold mb-4 ">From the blog</h3>
+          <h3 className="text-[20px] capitalize font-semibold mb-4 ">
+            From the blog
+          </h3>
           <Swiper
             slidesPerView={3}
             spaceBetween={25}
@@ -146,7 +172,7 @@ const Home = () => {
           </Swiper>
         </div>
       </section>
-      <Footer/>
+      
     </>
   );
 };

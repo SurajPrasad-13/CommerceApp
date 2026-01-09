@@ -26,7 +26,7 @@ const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
 
 const Header = () => {
   return (
-    <header className="bg-white">
+    <header className="bg-white relative">
       {/* Top Strip */}
       <div className="top-strip py-2">
         <div className="container">
@@ -51,71 +51,73 @@ const Header = () => {
         </div>
       </div>
 
-      {/* logo & Search Strip */}
-      <div className="header py-1">
-        <div className="container mx-auto flex items-center justify-between ">
-          <div className="col1 w-[25%]">
-            <Link to="/">
-              <img src={logo} alt="logo" />
-            </Link>
-          </div>
+      <div className=" sticky top-0 ">
+        {/* logo & Search Strip */}
+        <div className="header py-1">
+          <div className="container mx-auto flex items-center justify-between ">
+            <div className="col1 w-[25%]">
+              <Link to="/">
+                <img src={logo} alt="logo" />
+              </Link>
+            </div>
 
-          <div className="col2 w-[45%] ">
-            <Search />
-          </div>
+            <div className="col2 w-[45%] ">
+              <Search />
+            </div>
 
-          <div className="col3 w-[35%] flex items-center pl-7">
-            <ul className="flex items-center justify-end w-full gap-3">
-              <li className="list-none">
-                <Link
-                  to="/login"
-                  className="link transition-all text-sm font-semibold"
-                >
-                  Login
-                </Link>{" "}
-                |{" "}
-                <Link
-                  to="/register"
-                  className="link transition-all text-sm font-semibold"
-                >
-                  Register
-                </Link>
-              </li>
+            <div className="col3 w-[35%] flex items-center pl-7">
+              <ul className="flex items-center justify-end w-full gap-3">
+                <li className="list-none">
+                  <Link
+                    to="/login"
+                    className="link transition-all text-sm font-semibold"
+                  >
+                    Login
+                  </Link>{" "}
+                  |{" "}
+                  <Link
+                    to="/register"
+                    className="link transition-all text-sm font-semibold"
+                  >
+                    Register
+                  </Link>
+                </li>
 
-              <li>
-                <Tooltip title="Compare">
-                  <IconButton aria-label="cart">
-                    <StyledBadge badgeContent={4} color="primary">
-                      <BiGitCompare />{" "}
-                    </StyledBadge>
-                  </IconButton>
-                </Tooltip>
-              </li>
-              <li>
-                <Tooltip title="Wishlist">
-                  <IconButton aria-label="cart">
-                    <StyledBadge badgeContent={4} color="primary">
-                      <FaRegHeart />{" "}
-                    </StyledBadge>
-                  </IconButton>
-                </Tooltip>
-              </li>
-              <li>
-                <Tooltip title="Cart">
-                  <IconButton aria-label="cart">
-                    <StyledBadge badgeContent={4} color="primary">
-                      <AiOutlineShoppingCart />
-                    </StyledBadge>
-                  </IconButton>
-                </Tooltip>
-              </li>
-            </ul>
+                <li>
+                  <Tooltip title="Compare">
+                    <IconButton aria-label="cart">
+                      <StyledBadge badgeContent={4} color="primary">
+                        <BiGitCompare />{" "}
+                      </StyledBadge>
+                    </IconButton>
+                  </Tooltip>
+                </li>
+                <li>
+                  <Tooltip title="Wishlist">
+                    <IconButton aria-label="cart">
+                      <StyledBadge badgeContent={4} color="primary">
+                        <FaRegHeart />{" "}
+                      </StyledBadge>
+                    </IconButton>
+                  </Tooltip>
+                </li>
+                <li>
+                  <Tooltip title="Cart">
+                    <IconButton aria-label="cart">
+                      <StyledBadge badgeContent={4} color="primary">
+                        <AiOutlineShoppingCart />
+                      </StyledBadge>
+                    </IconButton>
+                  </Tooltip>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Navigation Bar */}
-      <Navigation />
+        {/* Navigation Bar */}
+        <Navigation />
+      </div>
     </header>
   );
 };

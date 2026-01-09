@@ -15,11 +15,15 @@ body {
   background-color: #f5f0f0;
   overflow-x: hidden;
 }
-.btn-org{
+.btn-org {
   background-color: #ff5252 !important;
   color: white !important;
-  font-weight: 500;padding: 7px 20px !important;
+  font-weight: 500;
+  padding: 7px 20px !important;
   margin: 5px 0 !important;
+  &:hover {
+    background-color: #000 !important;
+  }
 }
 .container {
   margin: auto;
@@ -34,14 +38,15 @@ header .top-strip,
 }
 .link:hover {
   color: var(--color-primary);
+  transition: all 0.2s ease-in-out;
 }
 
 .sliderHome {
   overflow: inherit !important;
 }
-.swiper-pagination-bullet {
+/* .swiper-pagination-bullet {
   background-color: black !important;
-}
+} */
 .swiper-button-prev svg,
 .swiper-button-next svg {
   color: #000;
@@ -58,9 +63,9 @@ header .top-strip,
   background-color: white;
   border-radius: 50%;
   transition: all ease-in-out 0.1s;
-  &:hover {
-    background-color: rgba(254, 56, 56, 0.2);
-  }
+  /* &:hover {
+    background-color: rgba(254, 56, 56, 0.7);
+  } */
 }
 .homeCatSlider .swiper-button-prev svg,
 .homeCatSlider .swiper-button-next svg {
@@ -100,7 +105,6 @@ header .top-strip,
   color: #ff5252 !important;
 }
 
-
 /* Blog slider CSS */
 /* .blogSlider{
   overflow: visible !important;
@@ -131,6 +135,42 @@ header .top-strip,
 } */
 
 /* Footer Form Lable CSS */
-.MuiFormControlLabel-label{
+.MuiFormControlLabel-label {
   font-size: 14px !important;
 }
+
+/* HomeSlider CSS */
+.swiper-pagination-bullet-active {
+  background: #ff5252 !important;
+}
+.homeSliderV2 .swiper-slide-active .info {
+  right: 0 !important;
+  opacity: 1;
+}
+.homeSliderV2 .swiper-slide-active .info h4 {
+  right: 0 !important;
+  opacity: 1;
+  transition-duration: 0.8s;
+}
+.homeSliderV2 .swiper-slide-active .info h2 {
+  right: 0 !important;
+  opacity: 1;
+  transition-duration: 1s;
+}
+.homeSliderV2 .swiper-slide-active .info h3 {
+  right: 0 !important;
+  opacity: 1;
+  transition-duration: 1.2s;
+}
+.homeSliderV2 .swiper-slide-active .info .shopNow {
+  right: 0 !important;
+  opacity: 1;
+  transition-duration: 1.4s;
+}
+
+
+/* ====  Styles for shop category on product listing page  ==== */
+.MuiCheckbox-root{
+  padding: 6px !important;
+}
+
