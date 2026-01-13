@@ -40,7 +40,7 @@ const Home = () => {
           <div className="flex items-center justify-between">
             <div className="leftSec ">
               <h3 className="text-[20px] font-semibold ">Popular Products</h3>
-              <p>Do not miss the current offers until the end of March.</p>
+              <p className=" text-black text-[16px]">Do not miss the current offers until the end of March.</p>
             </div>
             <div className="rightSec">
               <Box
@@ -69,7 +69,7 @@ const Home = () => {
             </div>
           </div>
 
-          <ProductSlider items={5} />
+          <ProductSlider items={6} />
         </div>
       </section>
       {/* Slider V2 */}

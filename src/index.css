@@ -15,6 +15,10 @@ body {
   background-color: #f5f0f0;
   overflow-x: hidden;
 }
+p {
+  line-height: 20px;
+  color: rgb(73, 73, 73);
+}
 .btn-org {
   background-color: #ff5252 !important;
   color: white !important;
@@ -41,9 +45,9 @@ header .top-strip,
   transition: all 0.2s ease-in-out;
 }
 
-.sliderHome {
+/* .sliderHome {
   overflow: inherit !important;
-}
+} */
 /* .swiper-pagination-bullet {
   background-color: black !important;
 } */
@@ -168,9 +172,52 @@ header .top-strip,
   transition-duration: 1.4s;
 }
 
-
 /* ====  Styles for shop category on product listing page  ==== */
-.MuiCheckbox-root{
+.MuiCheckbox-root {
   padding: 6px !important;
 }
 
+.itemViewActions button.action svg {
+  color: #ff5252 !important;
+}
+
+/* pagination styles */
+.Mui-selected.MuiPaginationItem-page {
+  background: #ff5252 !important;
+  color: white !important;
+}
+
+/* ========  Styles for product Details page  ======== */
+/* styles for vertical slider */
+.zoomProductSliderThumbs {
+  height: 100%;
+}
+
+.zoomProductSliderThumbs .swiper-wrapper {
+  height: 100%;
+}
+
+.zoomProductSliderThumbs .swiper-slide {
+  height: auto !important;
+  display: flex;
+  align-items: center;
+}
+
+/* styles for the main image */
+/* Force wrapper to take full height */
+.productZoomImage,
+.productZoomImage .iiz {
+  height: 100%;
+  width: 100%;
+}
+
+.zoomContainer .iiz__btn {
+  visibility: hidden;
+}
+
+/* Styles for Quantity input on Product Details page */
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
