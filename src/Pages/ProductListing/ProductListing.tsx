@@ -1,5 +1,6 @@
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import ProductItem from "../../Components/ProductItem/ProductItem";
+import ProductItemList from "../../Components/ProductItemList/ProductItemList";
 
 // MIU Components
 import Typography from "@mui/material/Typography";
@@ -8,6 +9,7 @@ import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Pagination from "@mui/material/Pagination";
 
 // Images
 import FloralChiffonSaree1 from "../../assets/FloralChiffonSaree1.webp";
@@ -19,8 +21,10 @@ import PinkSaree2 from "../../assets/PinkSaree2.jpg";
 import { IoGridSharp } from "react-icons/io5";
 import { TiThMenu } from "react-icons/ti";
 import { useState } from "react";
+
 const ProductListing = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [itemView, setItemView] = useState("grid");
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -30,7 +34,7 @@ const ProductListing = () => {
   };
 
   return (
-    <section className="py-5">
+    <section className="pt-5">
       {/* BreadCrums Section */}
       <div className="container">
         <Breadcrumbs aria-label="breadcrumb">
@@ -61,12 +65,26 @@ const ProductListing = () => {
           <div className="rightContent w-[80%] py-3">
             {/* Invertory Info and sortBy Section */}
             <div className="bg-[#f1f1f1] p-2 w-full mb-3 rounded-md flex items-center justify-between">
-              <div className="col1 flex items-center gap-1">
-                <Button className="size-10! min-w-10! rounded-full! text-black">
-                  <TiThMenu className="text-black/70 text-lg" />
+              <div className="col1 flex items-center gap-1 itemViewActions z-10">
+                <Button
+                  className={`size-10! min-w-10! rounded-full! text-black`}
+                  onClick={() => setItemView("list")}
+                >
+                  <TiThMenu
+                    className={`${
+                      itemView === "list" ? "text-primary" : "text-black/70"
+                    }  text-lg`}
+                  />
                 </Button>
-                <Button className="size-10! min-w-10! rounded-full! text-black">
-                  <IoGridSharp className="text-black/70 text-lg" />
+                <Button
+                  className={`size-10! min-w-10! rounded-full! `}
+                  onClick={() => setItemView("grid")}
+                >
+                  <IoGridSharp
+                    className={`${
+                      itemView === "grid" ? "text-primary" : "text-black/70"
+                    }  text-lg`}
+                  />
                 </Button>
                 <span className="text-sm font-medium pl-3 text-black/70">
                   There are 27 Products.{" "}
@@ -138,65 +156,147 @@ const ProductListing = () => {
                 </Menu>
               </div>
             </div>
-            {/* Product Display Section */}
-            <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-4 ">
-              <ProductItem
-                discount={22}
-                img={[PinkSaree1, PinkSaree2]}
-                brand={"Koskii"}
-                title={"Pink Floral Beads and Stones Pure Chiffon Saree"}
-                newPrice={1850}
-                oldPrice={2450}
-              />
-              <ProductItem
-                discount={22}
-                img={[PinkSaree1, PinkSaree2]}
-                brand={"Koskii"}
-                title={"Pink Floral Beads and Stones Pure Chiffon Saree"}
-                newPrice={1850}
-                oldPrice={2450}
-              />
-              <ProductItem
-                discount={22}
-                img={[FloralChiffonSaree1, FloralChiffonSaree2]}
-                brand={"Koskii"}
-                title={"Floral Beads and Stones Pure Chiffon Saree"}
-                newPrice={1850}
-                oldPrice={2450}
-              />
-              <ProductItem
-                discount={22}
-                img={[FloralChiffonSaree1, FloralChiffonSaree2]}
-                brand={"Koskii"}
-                title={"Floral Beads and Stones Pure Chiffon Saree"}
-                newPrice={1850}
-                oldPrice={2450}
-              />
-              <ProductItem
-                discount={22}
-                img={[PinkSaree1, PinkSaree2]}
-                brand={"Koskii"}
-                title={"Pink Floral Beads and Stones Pure Chiffon Saree"}
-                newPrice={1850}
-                oldPrice={2450}
-              />
 
-              <ProductItem
-                discount={22}
-                img={[PinkSaree1, PinkSaree2]}
-                brand={"Koskii"}
-                title={"Pink Floral Beads and Stones Pure Chiffon Saree"}
-                newPrice={1850}
-                oldPrice={2450}
-              />
-              <ProductItem
-                discount={22}
-                img={[FloralChiffonSaree1, FloralChiffonSaree2]}
-                brand={"Koskii"}
-                title={"Floral Beads and Stones Pure Chiffon Saree"}
-                newPrice={1850}
-                oldPrice={2450}
-              />
+            {/* Product Display Section */}
+            <div
+              className={`grid ${
+                itemView === "grid"
+                  ? "grid-cols-2 md:grid-cols-4 xl:grid-cols-5"
+                  : "grid-cols-1"
+              }  gap-4`}
+            >
+              {itemView === "grid" ? (
+                <>
+                  <ProductItem
+                    discount={22}
+                    img={[PinkSaree1, PinkSaree2]}
+                    brand={"Koskii"}
+                    title={"Pink Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+                  <ProductItem
+                    discount={22}
+                    img={[PinkSaree1, PinkSaree2]}
+                    brand={"Koskii"}
+                    title={"Pink Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+                  <ProductItem
+                    discount={22}
+                    img={[FloralChiffonSaree1, FloralChiffonSaree2]}
+                    brand={"Koskii"}
+                    title={"Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+                  <ProductItem
+                    discount={22}
+                    img={[FloralChiffonSaree1, FloralChiffonSaree2]}
+                    brand={"Koskii"}
+                    title={"Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+                  <ProductItem
+                    discount={22}
+                    img={[PinkSaree1, PinkSaree2]}
+                    brand={"Koskii"}
+                    title={"Pink Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+
+                  <ProductItem
+                    discount={22}
+                    img={[PinkSaree1, PinkSaree2]}
+                    brand={"Koskii"}
+                    title={"Pink Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+                  <ProductItem
+                    discount={22}
+                    img={[FloralChiffonSaree1, FloralChiffonSaree2]}
+                    brand={"Koskii"}
+                    title={"Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+                  <ProductItem
+                    discount={22}
+                    img={[FloralChiffonSaree1, FloralChiffonSaree2]}
+                    brand={"Koskii"}
+                    title={"Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+                </>
+              ) : (
+                <>
+                  <ProductItemList
+                    discount={22}
+                    img={[PinkSaree1, PinkSaree2]}
+                    brand={"Koskii"}
+                    title={"Pink Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+                  <ProductItemList
+                    discount={22}
+                    img={[PinkSaree1, PinkSaree2]}
+                    brand={"Koskii"}
+                    title={"Pink Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+                  <ProductItemList
+                    discount={22}
+                    img={[FloralChiffonSaree1, FloralChiffonSaree2]}
+                    brand={"Koskii"}
+                    title={"Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+                  <ProductItemList
+                    discount={22}
+                    img={[FloralChiffonSaree1, FloralChiffonSaree2]}
+                    brand={"Koskii"}
+                    title={"Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+                  <ProductItemList
+                    discount={22}
+                    img={[PinkSaree1, PinkSaree2]}
+                    brand={"Koskii"}
+                    title={"Pink Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+
+                  <ProductItemList
+                    discount={22}
+                    img={[PinkSaree1, PinkSaree2]}
+                    brand={"Koskii"}
+                    title={"Pink Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+                  <ProductItemList
+                    discount={22}
+                    img={[FloralChiffonSaree1, FloralChiffonSaree2]}
+                    brand={"Koskii"}
+                    title={"Floral Beads and Stones Pure Chiffon Saree"}
+                    newPrice={1850}
+                    oldPrice={2450}
+                  />
+                </>
+              )}
+            </div>
+            <div className=" flex justify-center pt-6">
+              <Pagination count={6} showFirstButton showLastButton />
             </div>
           </div>
         </div>

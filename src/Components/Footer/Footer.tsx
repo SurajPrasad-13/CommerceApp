@@ -29,8 +29,8 @@ const Footer = () => {
     <>
       <footer className="py-6 bg-[#fafafa]">
         <div className="container">
-          <div className="flex items-start justify-center gap-2 py-8 ">
-            <div className="col flex items-center justify-center flex-col group  w-[18%]">
+          <div className="flex items-start justify-center gap-2 py-8  ">
+            <div className="col flex items-start sm:items-center justify-center flex-col group  w-[18%]">
               <LiaShippingFastSolid className="text-4xl transition-all duration-300 group-hover:text-primary group-hover:-translate-y-1" />
               <h3 className=" capitalize font-medium pt-2 text-[15px]">
                 Free Shipping
@@ -39,7 +39,7 @@ const Footer = () => {
                 For all Orders Over ₹500
               </p>
             </div>
-            <div className="col flex items-center justify-center flex-col group  w-[18%]">
+            <div className="col flex items-start sm:items-center justify-center flex-col group  w-[18%]">
               <TbTruckReturn className="text-4xl transition-all duration-300 group-hover:text-primary group-hover:-translate-y-1" />
               <h3 className=" capitalize font-medium pt-2 text-[15px]">
                 30 Days Returns
@@ -48,7 +48,7 @@ const Footer = () => {
                 For an Exchange Product
               </p>
             </div>
-            <div className="col flex items-center justify-center flex-col group  w-[18%]">
+            <div className="col flex items-start sm:items-center justify-center flex-col group  w-[18%]">
               <IoWalletOutline className="text-4xl transition-all duration-300 group-hover:text-primary group-hover:-translate-y-1" />
               <h3 className=" capitalize font-medium pt-2 text-[15px]">
                 Secured Payment
@@ -57,7 +57,7 @@ const Footer = () => {
                 Payment Cards Accepted
               </p>
             </div>
-            <div className="col flex items-center justify-center flex-col group  w-[18%]">
+            <div className="col flex items-start sm:items-center justify-center flex-col group  w-[18%]">
               <IoGiftOutline className="text-4xl transition-all duration-300 group-hover:text-primary group-hover:-translate-y-1" />
               <h3 className=" capitalize font-medium pt-2 text-[15px]">
                 Special Gifts
@@ -66,7 +66,7 @@ const Footer = () => {
                 Our First Product Order
               </p>
             </div>
-            <div className="col flex items-center justify-center flex-col group  w-[18%]">
+            <div className="col flex items-start sm:items-center justify-center flex-col group  w-[18%]">
               <BiSupport className="text-4xl transition-all duration-300 group-hover:text-primary group-hover:-translate-y-1" />
               <h3 className=" capitalize font-medium pt-2 text-[15px]">
                 Support 24/7
@@ -78,6 +78,7 @@ const Footer = () => {
           </div>
           <hr />
 
+{/* second part */}
           <div className="footer flex items-start py-8">
             <div className="part1 w-[25%]">
               <h2 className="text-lg font-semibold mb-3">Contact Us</h2>
