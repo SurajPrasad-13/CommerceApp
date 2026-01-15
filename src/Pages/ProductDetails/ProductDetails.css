@@ -1,0 +1,39 @@
+.largeImgSlider .swiper-button-prev,
+.swiper-button-next {
+  height: 30px !important;
+  width: 30px !important;
+  min-width: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transition: all ease-in-out 0.1s;
+  &:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+.largeImgSlider .swiper-button-prev {
+  height: 30px !important;
+  width: 30px !important;
+  min-width: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transition: all ease-in-out 0.1s;
+  &:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+.largeImgSlider .swiper-button-next svg {
+  height: 40%;
+  width: 40%;
+  &:hover {
+    height: 80%;
+    width: 80%;
+  }
+}
+.largeImgSlider .swiper-button-prev svg {
+  height: 40%;
+  width: 40%;
+   &:hover {
+    height: 50%;
+    width: 50%;
+  }
+}

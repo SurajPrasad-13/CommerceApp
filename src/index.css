@@ -54,6 +54,8 @@ header .top-strip,
 .swiper-button-prev svg,
 .swiper-button-next svg {
   color: #000;
+  height: 50% !important;
+  width: 50% !important;
 }
 
 /* .homeCatSlider {
@@ -220,4 +222,16 @@ input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+/* Styles for scroll bar on Product Details page */
+.reviewScroll::-webkit-scrollbar{
+  width: 5px !important;
+}
+.reviewScroll::-webkit-scrollbar-thumb{
+  background: #ccc !important;
+}
+
+/* Styles for Product Details Model */
+.productDetailModal .MuiDialogContent-root{
+  padding: 10px ;
 }
