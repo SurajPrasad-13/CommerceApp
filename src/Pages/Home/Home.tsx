@@ -151,6 +151,7 @@ const Home = () => {
             slidesPerView={3}
             spaceBetween={25}
             navigation={true}
+            loop={true}
             modules={[Navigation]}
             className="blogSlider relative"
           >

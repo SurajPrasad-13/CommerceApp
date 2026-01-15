@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import "./ProductItem.css";
-import Rating from "@mui/material/Rating";
+import { useContext } from "react";
+import { MyContext } from "../../App";
+
+// React Icons
 import { FaRegHeart } from "react-icons/fa";
 import { BiGitCompare } from "react-icons/bi";
 import { MdZoomOutMap } from "react-icons/md";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+
+// MUI Components
+import Rating from "@mui/material/Rating";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 
@@ -18,12 +24,13 @@ interface ProductItemProps {
 }
 
 const ProductItem = (props: ProductItemProps) => {
-  console.log(props.img);
+  const context = useContext(MyContext);
+
   return (
     <div className="productItem rounded-md overflow-hidden border border-gray-400 hover:shadow-lg transition-all hover:-translate-y-0.5 ">
       <div className="group imgWrapper w-full  rounded-md relative">
-        <Link to="/">
-          <div className="img h-65 md:h-55 overflow-hidden relative">
+        <Link to="/product/3">
+          <div className="img md:h-50 xl:h-55 overflow-hidden relative">
             <img src={props.img[0]} alt="" className="w-full" />
             <img
               src={props.img[1]}
@@ -48,7 +55,10 @@ const ProductItem = (props: ProductItemProps) => {
             </Button>
           </Tooltip>
           <Tooltip title="Product Details" placement="left-start">
-            <Button className="size-8! min-w-8! rounded-full! text-black! bg-white! hover:bg-primary/70! hover:text-white group ">
+            <Button
+              className="size-8! min-w-8! rounded-full! text-black! bg-white! hover:bg-primary/70! hover:text-white group "
+              onClick={() => context.setOpenProductModel(true)}
+            >
               <MdZoomOutMap className="text-[18px] text-black group-hover:text-white " />
             </Button>
           </Tooltip>
@@ -75,7 +85,7 @@ const ProductItem = (props: ProductItemProps) => {
           </span>
         </div>
         <Button className="w-[97%] text-primary! border! border-primary! flex items-center text-[13px]! gap-3 font-medium! uppercase! hover:bg-black! hover:text-white! transition-all duration-400! hover:border-black!">
-          <AiOutlineShoppingCart className="text-xl lg:visible hidden " />
+          <AiOutlineShoppingCart className="text-xl lg:block hidden " />
           Add to cart
         </Button>
       </div>

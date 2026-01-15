@@ -1,18 +1,22 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.jpg";
 import Search from "../Search/Search";
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import Badge from "@mui/material/Badge";
-// import { BadgeProps } from "@mui/material";
-import type { BadgeProps } from "@mui/material/Badge";
+
+// React Icons
+import { BiGitCompare } from "react-icons/bi";
 import { FaRegHeart } from "react-icons/fa";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
+// MUI Components
+import Badge from "@mui/material/Badge";
+import type { BadgeProps } from "@mui/material/Badge";
 import Tooltip from "@mui/material/Tooltip";
-
 import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
-import { BiGitCompare } from "react-icons/bi";
+
+// UI Components
 import Navigation from "./Navigation/Navigation";
+
 const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
   "& .MuiBadge-badge": {
     backgroundColor: "#ff6767", // 👈 your color
