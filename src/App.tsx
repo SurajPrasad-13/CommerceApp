@@ -16,6 +16,7 @@ import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import ProductZoom from "./Components/ProductZoom/ProductZoom";
 import ProductData from "./Components/ProductData/ProductData";
 import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
 
 const MyContext = createContext({ setOpenProductModel: () => {} });
 
@@ -39,6 +40,7 @@ const App = () => {
             <Route path="/productListing" element={<ProductListing />} />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
           <Footer />
         </MyContext.Provider>
