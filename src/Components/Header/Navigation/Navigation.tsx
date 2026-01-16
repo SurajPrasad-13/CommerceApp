@@ -41,7 +41,7 @@ const Navigation = () => {
               {/* ===== NAV ITEM : Fashion ===== */}
               <li className="list-none relative">
                 <Link
-                  to="/"
+                  to="/productListing"
                   className="navi link transition-all text-sm font-medium"
                 >
                   Fashion

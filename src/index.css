@@ -29,6 +29,11 @@ p {
     background-color: #000 !important;
   }
 }
+.btn-lg{
+   font-size: 17px !important;
+   padding: 7px 20px !important;
+}
+
 .container {
   margin: auto;
 }
