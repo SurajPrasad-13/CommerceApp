@@ -16,6 +16,8 @@ import IconButton from "@mui/material/IconButton";
 
 // UI Components
 import Navigation from "./Navigation/Navigation";
+import { useContext } from "react";
+import { MyContext } from "../../App";
 
 const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -29,6 +31,8 @@ const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
 }));
 
 const Header = () => {
+
+  const context = useContext(MyContext)
   return (
     <header className="bg-white relative">
       {/* Top Strip */}
@@ -107,9 +111,9 @@ const Header = () => {
                 </li>
                 <li>
                   <Tooltip title="Cart">
-                    <IconButton aria-label="cart">
+                    <IconButton aria-label="cart" onClick={()=>context.setOpenCartPanel(true)}>
                       <StyledBadge badgeContent={4} color="primary">
-                        <AiOutlineShoppingCart />
+                        <AiOutlineShoppingCart  />
                       </StyledBadge>
                     </IconButton>
                   </Tooltip>

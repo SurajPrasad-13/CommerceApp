@@ -1,13 +1,12 @@
-import { Link } from "react-router-dom";
-
 // MUi Components
 import Button from "@mui/material/Button";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import Drawer from "@mui/material/Drawer";
 
 // react icons
 import { LiaShippingFastSolid } from "react-icons/lia";
-import { IoGiftOutline } from "react-icons/io5";
+import { IoClose, IoGiftOutline } from "react-icons/io5";
 import { TbTruckReturn } from "react-icons/tb";
 import { IoWalletOutline } from "react-icons/io5";
 import { BiSupport } from "react-icons/bi";
@@ -24,7 +23,15 @@ import payPal from "../../assets/paypal.png";
 import masterCard from "../../assets/master_card.png";
 import americanExp from "../../assets/american_express.png";
 
+import CartPanel from "../CartPanel/CartPanel";
+import { useContext } from "react";
+import { MyContext } from "../../App";
+import { Link } from "react-router-dom";
+
+
 const Footer = () => {
+
+  const context = useContext(MyContext)
   return (
     <>
       <footer className="py-6 bg-[#fafafa]">
@@ -78,7 +85,7 @@ const Footer = () => {
           </div>
           <hr />
 
-{/* second part */}
+          {/* second part */}
           <div className="footer flex items-start py-8">
             <div className="part1 w-[25%]">
               <h2 className="text-lg font-semibold mb-3">Contact Us</h2>
@@ -259,6 +266,26 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+       {/* Cart Panel */}
+      <Drawer
+        open={!!context?.openCartPanel}
+        onClose={() => context.setOpenCartPanel()}
+        anchor="right"
+        className="cartPanel"
+      >
+        <div className="flex items-center justify-between py-3 px-4 gap-3 border-b border-black/20">
+          <h4>Shopping Cart (1)</h4>
+          <Button
+            className=" rounded-full!  min-w-3!   text-xl! text-black/70! bg-[#f0f0f0]!"
+            onClick={() => context.setOpenCartPanel()}
+          >
+            <IoClose className="text-lg cursor-pointer" />
+          </Button>
+        </div>
+
+       <CartPanel/>
+      </Drawer>
     </>
   );
 };

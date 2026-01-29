@@ -18,18 +18,35 @@ import ProductData from "./Components/ProductData/ProductData";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 
-const MyContext = createContext({ setOpenProductModel: () => {} });
+const MyContext = createContext({
+  openCartPanel:Boolean,
+  setOpenProductModel: () => {},
+  setOpenCartPanel: () => {},
+  toggleCartPanel: () => {},
+  
+});
 
 const App = () => {
   const [openProductModel, setOpenProductModel] = useState(false);
   const [maxWidth, setMaxWidth] = useState("md");
   const [fullWidth, setFullWidth] = useState(true);
+  const [openCartPanel, setOpenCartPanel] = useState(false);
 
   const handleCloseProductModel = () => {
     setOpenProductModel(false);
   };
 
-  const value = { setOpenProductModel };
+  const toggleCartPanel = (newOpen: boolean) => () => {
+    setOpenCartPanel(newOpen);
+  };
+
+  const value = {
+    setOpenProductModel,
+    setOpenCartPanel,
+    toggleCartPanel,
+    openCartPanel,
+  };
+
   return (
     <>
       <BrowserRouter>
@@ -41,12 +58,13 @@ const App = () => {
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            {/* <Route path="/cart" element={<Cart />} /> */}
           </Routes>
           <Footer />
         </MyContext.Provider>
       </BrowserRouter>
 
-{/* Product Model */}
+      {/* Product Model */}
       <Dialog
         open={openProductModel}
         fullWidth={fullWidth}
